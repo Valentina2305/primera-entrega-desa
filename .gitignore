@@ -1,0 +1,11 @@
+# Archivos temporales
+*.tmp
+*~
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Carpetas de desarrollo
+.vscode/
+node_modules/

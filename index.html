@@ -4,132 +4,723 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Almacén Sin TACC - Productos libres de gluten</title>
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Header con navegación -->
-  <header>
-    <h1>Almacén Sin TACC</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">Sobre Nosotros</a></li>
-        <li><a href="#products">Productos</a></li>
-        <li><a href="#recipes">Recetas</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">
+          <i class="bi bi-shop-window me-2"></i>
+          Almacén Sin TACC
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">
+                <i class="bi bi-house me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">
+                <i class="bi bi-info-circle me-1"></i>Sobre Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">
+                <i class="bi bi-bag me-1"></i>Productos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#recipes">
+                <i class="bi bi-journal-bookmark me-1"></i>Recetas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">
+                <i class="bi bi-telephone me-1"></i>Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
   <!-- Sección principal -->
   <main>
 
-    <!-- Sección de bienvenida -->
-    <section id="intro">
-      <h2>Bienvenidos a nuestro almacén Sin TACC</h2>
-      <p>Tu tienda especializada en productos libres de gluten, celiaquía y alimentación saludable.</p>
-      <img src="img/almacen-frontal.jpg" alt="Fachada de nuestro almacén sin TACC" width="100%">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section bg-success text-white">
+      <div class="container">
+        <div class="row align-items-center min-vh-75">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 class="display-4 fw-bold mb-4">
+                Bienvenidos a nuestro
+                <span class="text-warning">Almacén Sin TACC</span>
+              </h1>
+              <p class="lead mb-4">
+                Tu tienda especializada en productos libres de gluten, celiaquía y alimentación saludable. 
+                Ofrecemos la mayor variedad de productos certificados Sin TACC.
+              </p>
+              <div class="hero-buttons">
+                <a href="#products" class="btn btn-warning btn-lg me-3">
+                  <i class="bi bi-bag-check me-2"></i>Ver Productos
+                </a>
+                <a href="#contact" class="btn btn-outline-light btn-lg">
+                  <i class="bi bi-telephone me-2"></i>Contactanos
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image text-center">
+              <img src="img/almacen-frontal.jpg" alt="Fachada de nuestro almacén sin TACC especializado en productos libres de gluten" 
+                   class="img-fluid rounded shadow-lg">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Sobre Nosotros -->
-    <section id="about">
-      <h2>Sobre Nosotros</h2>
-      <p>Somos un almacén especializado en productos sin TACC (Trigo, Avena, Cebada y Centeno), creado para brindar opciones seguras y deliciosas para personas celíacas o con sensibilidad al gluten.</p>
-      <p>Todos nuestros productos están certificados y cumplen con los más altos estándares de calidad.</p>
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-success mb-3">
+              <i class="bi bi-heart-fill text-danger me-2"></i>
+              Sobre Nosotros
+            </h2>
+            <p class="lead text-muted">Comprometidos con tu salud y bienestar</p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-content">
+              <h3 class="h4 mb-3 text-success">Nuestra Misión</h3>
+              <p class="mb-4">
+                Somos un almacén especializado en productos sin TACC (Trigo, Avena, Cebada y Centeno), 
+                creado para brindar opciones seguras y deliciosas para personas celíacas o con sensibilidad al gluten.
+              </p>
+              <h3 class="h4 mb-3 text-success">Calidad Garantizada</h3>
+              <p class="mb-4">
+                Todos nuestros productos están certificados y cumplen con los más altos estándares de calidad. 
+                Trabajamos directamente con proveedores certificados para garantizar la seguridad alimentaria.
+              </p>
+              <div class="features-list">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <span>Productos 100% certificados Sin TACC</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <span>Asesoramiento nutricional especializado</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <span>Entrega a domicilio disponible</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-stats bg-white p-4 rounded shadow-sm">
+              <div class="row text-center">
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="display-6 fw-bold text-success mb-0">5+</h3>
+                    <p class="text-muted small">Años de experiencia</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="display-6 fw-bold text-success mb-0">500+</h3>
+                    <p class="text-muted small">Productos disponibles</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="display-6 fw-bold text-success mb-0">1000+</h3>
+                    <p class="text-muted small">Clientes satisfechos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Productos -->
-    <section id="products">
-      <h2>Nuestros Productos</h2>
-      
-      <article>
-        <h3>Harinas y premezclas</h3>
-        <ul>
-          <li>Harina de arroz - $350</li>
-          <li>Harina de mandioca - $400</li>
-          <li>Premezcla para pan - $550</li>
-          <li>Premezcla para pizza - $580</li>
-        </ul>
-      </article>
-      
-      <article>
-        <h3>Pastas</h3>
-        <ul>
-          <li>Fideos de arroz - $450</li>
-          <li>Ñoquis de papa - $500</li>
-          <li>Lasagna sin TACC - $700</li>
-        </ul>
-      </article>
-      
-      <article>
-        <h3>Snacks y galletitas</h3>
-        <ul>
-          <li>Galletitas dulces - $300</li>
-          <li>Galletitas saladas - $320</li>
-          <li>Alfajores sin TACC - $250 c/u</li>
-          <li>Barritas de cereal - $180</li>
-        </ul>
-      </article>
+    <section id="products" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-success mb-3">
+              <i class="bi bi-bag-check-fill me-2"></i>
+              Nuestros Productos
+            </h2>
+            <p class="lead text-muted">Amplia variedad de productos certificados Sin TACC</p>
+          </div>
+        </div>
+        
+        <!-- Categorías de productos -->
+        <div class="row g-4">
+          <!-- Harinas y premezclas -->
+          <div class="col-lg-4 col-md-6">
+            <article class="product-category card h-100 shadow-sm border-0">
+              <div class="card-header bg-success text-white text-center">
+                <h3 class="h5 mb-0">
+                  <i class="bi bi-wheat me-2"></i>
+                  Harinas y Premezclas
+                </h3>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <span><i class="bi bi-dot text-success"></i>Harina de arroz</span>
+                    <span class="badge bg-warning text-dark">$350</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <span><i class="bi bi-dot text-success"></i>Harina de mandioca</span>
+                    <span class="badge bg-warning text-dark">$400</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <span><i class="bi bi-dot text-success"></i>Premezcla para pan</span>
+                    <span class="badge bg-warning text-dark">$550</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center py-2">
+                    <span><i class="bi bi-dot text-success"></i>Premezcla para pizza</span>
+                    <span class="badge bg-warning text-dark">$580</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-cart-plus me-1"></i>Ver más productos
+                </button>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Pastas -->
+          <div class="col-lg-4 col-md-6">
+            <article class="product-category card h-100 shadow-sm border-0">
+              <div class="card-header bg-success text-white text-center">
+                <h3 class="h5 mb-0">
+                  <i class="bi bi-egg-fried me-2"></i>
+                  Pastas
+                </h3>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <span><i class="bi bi-dot text-success"></i>Fideos de arroz</span>
+                    <span class="badge bg-warning text-dark">$450</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <span><i class="bi bi-dot text-success"></i>Ñoquis de papa</span>
+                    <span class="badge bg-warning text-dark">$500</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center py-2">
+                    <span><i class="bi bi-dot text-success"></i>Lasagna sin TACC</span>
+                    <span class="badge bg-warning text-dark">$700</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-cart-plus me-1"></i>Ver más productos
+                </button>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Snacks y galletitas -->
+          <div class="col-lg-4 col-md-6">
+            <article class="product-category card h-100 shadow-sm border-0">
+              <div class="card-header bg-success text-white text-center">
+                <h3 class="h5 mb-0">
+                  <i class="bi bi-cookie me-2"></i>
+                  Snacks y Galletitas
+                </h3>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <span><i class="bi bi-dot text-success"></i>Galletitas dulces</span>
+                    <span class="badge bg-warning text-dark">$300</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <span><i class="bi bi-dot text-success"></i>Galletitas saladas</span>
+                    <span class="badge bg-warning text-dark">$320</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <span><i class="bi bi-dot text-success"></i>Alfajores sin TACC</span>
+                    <span class="badge bg-warning text-dark">$250 c/u</span>
+                  </li>
+                  <li class="d-flex justify-content-between align-items-center py-2">
+                    <span><i class="bi bi-dot text-success"></i>Barritas de cereal</span>
+                    <span class="badge bg-warning text-dark">$180</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-cart-plus me-1"></i>Ver más productos
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <!-- Call to action -->
+        <div class="row mt-5">
+          <div class="col-lg-12 text-center">
+            <div class="bg-light p-4 rounded">
+              <h4 class="text-success mb-3">¿No encontrás lo que buscás?</h4>
+              <p class="mb-3">Consultanos por productos específicos. Tenemos más de 500 productos disponibles.</p>
+              <a href="#contact" class="btn btn-success btn-lg">
+                <i class="bi bi-whatsapp me-2"></i>Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Recetas -->
-    <section id="recipes">
-      <h2>Recetas Sin TACC</h2>
-      <article>
-        <h3>Pan sin gluten</h3>
-        <p>Ingredientes: 500g de premezcla para pan, 1 huevo, 300ml de agua tibia, 25g de levadura fresca, 2 cucharadas de aceite.</p>
-        <p>Preparación: Mezclar todos los ingredientes, amasar y dejar levar por 1 hora. Hornear a 180°C por 30 minutos.</p>
-      </article>
-      
-      <article>
-        <h3>Pizza sin TACC</h3>
-        <p>Ingredientes: 400g de premezcla para pizza, 1 huevo, 200ml de agua, 2 cucharadas de aceite, sal a gusto.</p>
-        <p>Preparación: Formar la masa, agregar los toppings favoritos y hornear a 200°C por 15-20 minutos.</p>
-      </article>
+    <section id="recipes" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-success mb-3">
+              <i class="bi bi-journal-bookmark-fill me-2"></i>
+              Recetas Sin TACC
+            </h2>
+            <p class="lead text-muted">Deliciosas recetas para preparar en casa</p>
+          </div>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Pan sin gluten -->
+          <div class="col-lg-6">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0 d-flex align-items-center">
+                  <i class="bi bi-bread-slice me-2"></i>
+                  Pan sin gluten
+                  <span class="badge bg-success ms-auto">Fácil</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-3">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>Tiempo: 2 horas |
+                    <i class="bi bi-thermometer-half me-1"></i>180°C |
+                    <i class="bi bi-people me-1"></i>6 porciones
+                  </small>
+                </div>
+                <h4 class="h6 text-success mb-2">
+                  <i class="bi bi-basket2 me-1"></i>Ingredientes:
+                </h4>
+                <ul class="list-unstyled mb-3">
+                  <li><i class="bi bi-dot"></i>500g de premezcla para pan</li>
+                  <li><i class="bi bi-dot"></i>1 huevo</li>
+                  <li><i class="bi bi-dot"></i>300ml de agua tibia</li>
+                  <li><i class="bi bi-dot"></i>25g de levadura fresca</li>
+                  <li><i class="bi bi-dot"></i>2 cucharadas de aceite</li>
+                </ul>
+                <h4 class="h6 text-success mb-2">
+                  <i class="bi bi-list-ol me-1"></i>Preparación:
+                </h4>
+                <p class="text-muted">
+                  Mezclar todos los ingredientes, amasar bien y dejar levar por 1 hora en lugar cálido. 
+                  Formar el pan y hornear a 180°C por 30 minutos hasta dorar.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-printer me-1"></i>Imprimir receta
+                </button>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Pizza sin TACC -->
+          <div class="col-lg-6">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0 d-flex align-items-center">
+                  <i class="bi bi-pizza me-2"></i>
+                  Pizza sin TACC
+                  <span class="badge bg-success ms-auto">Fácil</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-3">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>Tiempo: 45 min |
+                    <i class="bi bi-thermometer-half me-1"></i>200°C |
+                    <i class="bi bi-people me-1"></i>4 porciones
+                  </small>
+                </div>
+                <h4 class="h6 text-success mb-2">
+                  <i class="bi bi-basket2 me-1"></i>Ingredientes:
+                </h4>
+                <ul class="list-unstyled mb-3">
+                  <li><i class="bi bi-dot"></i>400g de premezcla para pizza</li>
+                  <li><i class="bi bi-dot"></i>1 huevo</li>
+                  <li><i class="bi bi-dot"></i>200ml de agua</li>
+                  <li><i class="bi bi-dot"></i>2 cucharadas de aceite</li>
+                  <li><i class="bi bi-dot"></i>Sal a gusto</li>
+                </ul>
+                <h4 class="h6 text-success mb-2">
+                  <i class="bi bi-list-ol me-1"></i>Preparación:
+                </h4>
+                <p class="text-muted">
+                  Mezclar ingredientes hasta formar masa homogénea. Estirar, agregar tus toppings favoritos 
+                  y hornear a 200°C por 15-20 minutos hasta que esté dorada.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-printer me-1"></i>Imprimir receta
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <!-- Newsletter recetas -->
+        <div class="row mt-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="bg-success text-white p-4 rounded text-center">
+              <h4 class="mb-3">
+                <i class="bi bi-envelope-heart me-2"></i>
+                ¿Querés más recetas?
+              </h4>
+              <p class="mb-3">Suscribite a nuestro newsletter y recibí nuevas recetas cada semana</p>
+              <div class="row g-2">
+                <div class="col-md-8">
+                  <input type="email" class="form-control" placeholder="Tu email aquí">
+                </div>
+                <div class="col-md-4">
+                  <button class="btn btn-warning w-100">
+                    <i class="bi bi-send me-1"></i>Suscribirme
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Información importante -->
-    <section id="info">
-      <h2>¿Qué es el certificado Sin TACC?</h2>
-      <p>El logo Sin TACC garantiza que el producto está libre de gluten y es apto para celíacos. Todos nuestros productos cuentan con esta certificación.</p>
-
-      <h2>Consejos para una dieta sin gluten</h2>
-      <ul>
-        <li>Leer siempre las etiquetas de los productos</li>
-        <li>Evitar la contaminación cruzada en la cocina</li>
-        <li>Mantener utensilios exclusivos para preparaciones sin gluten</li>
-      </ul>
+    <section id="info" class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Certificado Sin TACC -->
+          <div class="col-lg-6">
+            <div class="info-card bg-light p-4 rounded h-100">
+              <div class="text-center mb-3">
+                <i class="bi bi-patch-check-fill text-success" style="font-size: 3rem;"></i>
+              </div>
+              <h3 class="h4 text-success text-center mb-3">¿Qué es el certificado Sin TACC?</h3>
+              <p class="text-center">
+                El logo Sin TACC garantiza que el producto está libre de gluten y es apto para celíacos. 
+                Todos nuestros productos cuentan con esta certificación oficial.
+              </p>
+              <div class="text-center">
+                <span class="badge bg-success p-2 fs-6">
+                  <i class="bi bi-shield-check me-1"></i>Certificación Oficial
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Consejos -->
+          <div class="col-lg-6">
+            <div class="info-card bg-light p-4 rounded h-100">
+              <div class="text-center mb-3">
+                <i class="bi bi-lightbulb-fill text-warning" style="font-size: 3rem;"></i>
+              </div>
+              <h3 class="h4 text-success text-center mb-3">Consejos para una dieta sin gluten</h3>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle text-success me-2"></i>
+                  <span>Leer siempre las etiquetas de los productos</span>
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle text-success me-2"></i>
+                  <span>Evitar la contaminación cruzada en la cocina</span>
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle text-success me-2"></i>
+                  <span>Mantener utensilios exclusivos para preparaciones sin gluten</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonios -->
-    <section id="testimonials">
-      <h2>Opiniones de nuestros clientes</h2>
-      <blockquote>
-        <p>"Por fin encontré un lugar donde puedo comprar todo lo que necesito para mi dieta sin gluten con total confianza." - María G.</p>
-      </blockquote>
-      <blockquote>
-        <p>"La calidad de los productos es excelente y el asesoramiento es muy profesional." - Carlos M.</p>
-      </blockquote>
+    <section id="testimonials" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-success mb-3">
+              <i class="bi bi-chat-heart-fill me-2"></i>
+              Opiniones de nuestros clientes
+            </h2>
+            <p class="lead text-muted">Lo que dicen quienes confían en nosotros</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="testimonial-card card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <div class="d-flex mb-3">
+                  <i class="bi bi-quote text-success" style="font-size: 2rem;"></i>
+                </div>
+                <p class="mb-3 fst-italic">
+                  "Por fin encontré un lugar donde puedo comprar todo lo que necesito para mi dieta sin gluten con total confianza. 
+                  La variedad de productos es increíble y la atención es excelente."
+                </p>
+                <div class="d-flex align-items-center">
+                  <div class="testimonial-avatar bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                    <i class="bi bi-person-fill"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-success">María González</h6>
+                    <small class="text-muted">Cliente desde 2020</small>
+                    <div class="text-warning mt-1">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="testimonial-card card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <div class="d-flex mb-3">
+                  <i class="bi bi-quote text-success" style="font-size: 2rem;"></i>
+                </div>
+                <p class="mb-3 fst-italic">
+                  "La calidad de los productos es excelente y el asesoramiento es muy profesional. 
+                  Mi familia y yo podemos disfrutar de comidas deliciosas sin preocuparnos por el gluten."
+                </p>
+                <div class="d-flex align-items-center">
+                  <div class="testimonial-avatar bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                    <i class="bi bi-person-fill"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-success">Carlos Martínez</h6>
+                    <small class="text-muted">Cliente desde 2019</small>
+                    <div class="text-warning mt-1">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer id="contact">
-    <h2>Contacto</h2>
-    <p>Dirección: Calle Sin Gluten 1234, Buenos Aires</p>
-    <p>Teléfono: (011) 1234-5678</p>
-    <p>Email: info@almacensintacc.com</p>
-    <p>Horario: Lunes a Sábados de 9:00 a 19:00 hs</p>
-    <nav>
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">WhatsApp</a></li>
-      </ul>
-    </nav>
-    <p>&copy; 2023 Almacén Sin TACC - Todos los derechos reservados</p>
+  <footer id="contact" class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Información de contacto -->
+        <div class="col-lg-4 col-md-6">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            Contacto
+          </h3>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt text-success me-2"></i>
+              <strong>Dirección:</strong><br>
+              <span class="ms-4">Calle Sin Gluten 1234, Buenos Aires</span>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone text-success me-2"></i>
+              <strong>Teléfono:</strong><br>
+              <a href="tel:+541112345678" class="text-white ms-4">(011) 1234-5678</a>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope text-success me-2"></i>
+              <strong>Email:</strong><br>
+              <a href="mailto:info@almacensintacc.com" class="text-white ms-4">info@almacensintacc.com</a>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-clock text-success me-2"></i>
+              <strong>Horario:</strong><br>
+              <span class="ms-4">Lunes a Sábados de 9:00 a 19:00 hs</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Redes sociales -->
+        <div class="col-lg-4 col-md-6">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-share-fill me-2"></i>
+            Seguinos
+          </h3>
+          <p class="mb-3">Mantente conectado con nosotros en redes sociales</p>
+          <div class="social-links">
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="#" class="btn btn-outline-success btn-lg mb-2" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <div class="mt-3">
+            <small class="text-muted">
+              <i class="bi bi-people-fill text-success me-1"></i>
+              Más de 5,000 seguidores nos eligen
+            </small>
+          </div>
+        </div>
+        
+        <!-- Mapa o información adicional -->
+        <div class="col-lg-4 col-md-12">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            Información
+          </h3>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="#about" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Sobre Nosotros
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#products" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Productos
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#recipes" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Recetas
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Términos y Condiciones
+              </a>
+            </li>
+          </ul>
+          
+          <!-- Call to action -->
+          <div class="mt-4 p-3 bg-success rounded">
+            <h5 class="h6 mb-2">¿Necesitás ayuda?</h5>
+            <p class="small mb-2">Consultanos por WhatsApp</p>
+            <a href="https://wa.me/541112345678" class="btn btn-light btn-sm">
+              <i class="bi bi-whatsapp text-success me-1"></i>
+              Escribinos
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <hr class="my-4 border-secondary">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted">
+            &copy; 2024 Almacén Sin TACC - Todos los derechos reservados
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <small class="text-muted">
+            <i class="bi bi-shield-check text-success me-1"></i>
+            Productos certificados ANMAT
+          </small>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Smooth scrolling script -->
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Update active nav link on scroll
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let currentSection = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSection) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
