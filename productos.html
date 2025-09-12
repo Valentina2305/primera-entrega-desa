@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos - Almacén Sin TACC</title>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header con navegación -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="index.html">
+          <i class="bi bi-shop-window me-2"></i>
+          Almacén Sin TACC
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="bi bi-house me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">
+                <i class="bi bi-info-circle me-1"></i>Sobre Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="productos.html">
+                <i class="bi bi-bag me-1"></i>Productos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recetas.html">
+                <i class="bi bi-journal-bookmark me-1"></i>Recetas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">
+                <i class="bi bi-telephone me-1"></i>Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section bg-success text-white py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 text-center">
+          <h1 class="display-4 fw-bold mb-3">
+            <i class="bi bi-bag-check-fill me-3"></i>
+            Nuestros Productos
+          </h1>
+          <p class="lead">Más de 500 productos certificados Sin TACC para tu alimentación saludable</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-5">
+    <div class="container">
+      
+      <!-- Filtros de productos -->
+      <section class="mb-5">
+        <div class="row">
+          <div class="col-12">
+            <div class="bg-light p-4 rounded">
+              <h3 class="h5 mb-3 text-success">
+                <i class="bi bi-funnel me-2"></i>
+                Filtrar por categoría
+              </h3>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-success active" data-filter="all">Todos</button>
+                <button class="btn btn-outline-success" data-filter="harinas">Harinas y Premezclas</button>
+                <button class="btn btn-outline-success" data-filter="pastas">Pastas</button>
+                <button class="btn btn-outline-success" data-filter="snacks">Snacks</button>
+                <button class="btn btn-outline-success" data-filter="panificados">Panificados</button>
+                <button class="btn btn-outline-success" data-filter="lacteos">Lácteos</button>
+                <button class="btn btn-outline-success" data-filter="conservas">Conservas</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Productos -->
+      <section>
+        <div class="row g-4">
+          
+          <!-- Harinas y Premezclas -->
+          <div class="col-lg-4 col-md-6" data-category="harinas">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-wheat text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Harina de Arroz Integral</h3>
+                <p class="card-text text-muted">Harina 100% de arroz integral, ideal para panes y masas. Rica en fibras y nutrientes.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-warning text-dark">1kg</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$450</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-category="harinas">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-wheat text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Premezcla para Pan</h3>
+                <p class="card-text text-muted">Mezcla perfecta de harinas sin gluten para hacer pan casero fácil y delicioso.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-warning text-dark">500g</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$650</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-category="harinas">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-wheat text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Harina de Mandioca</h3>
+                <p class="card-text text-muted">Harina de mandioca fina, perfecta para rebozados y preparaciones dulces.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-warning text-dark">1kg</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$380</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Pastas -->
+          <div class="col-lg-4 col-md-6" data-category="pastas">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-egg-fried text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Fideos de Arroz</h3>
+                <p class="card-text text-muted">Fideos de arroz, textura perfecta y sabor tradicional para tus platos favoritos.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-warning text-dark">500g</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$520</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-category="pastas">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-egg-fried text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Ñoquis de Papa</h3>
+                <p class="card-text text-muted">Ñoquis artesanales de papa, listos para cocinar. Sabor casero garantizado.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-warning text-dark">400g</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$580</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Snacks -->
+          <div class="col-lg-4 col-md-6" data-category="snacks">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-cookie text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Galletitas Dulces</h3>
+                <p class="card-text text-muted">Galletitas dulces crujientes, perfectas para acompañar tu té o café.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-warning text-dark">200g</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$320</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-category="snacks">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-cookie text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Alfajores Sin TACC</h3>
+                <p class="card-text text-muted">Alfajores artesanales con dulce de leche, cubiertos de coco rallado.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-warning text-dark">Unidad</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$280</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Panificados -->
+          <div class="col-lg-4 col-md-6" data-category="panificados">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-bread-slice text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Pan Lactal Sin TACC</h3>
+                <p class="card-text text-muted">Pan lactal fresco y esponjoso, perfecto para desayunos y meriendas.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-warning text-dark">400g</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$450</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Lácteos -->
+          <div class="col-lg-4 col-md-6" data-category="lacteos">
+            <article class="product-card card h-100 shadow-sm">
+              <div class="card-img-top bg-light p-4 text-center">
+                <i class="bi bi-cup-straw text-success" style="font-size: 4rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h5 text-success">Yogur Sin Lactosa</h3>
+                <p class="card-text text-muted">Yogur cremoso sin lactosa, ideal para celíacos con intolerancia.</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success">Sin TACC</span>
+                  <span class="badge bg-info">Sin Lactosa</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-success">$350</span>
+                  <button class="btn btn-outline-success btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+        
+        <!-- Paginación -->
+        <div class="row mt-5">
+          <div class="col-12 d-flex justify-content-center">
+            <nav aria-label="Navegación de productos">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Siguiente</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Call to action -->
+      <section class="mt-5">
+        <div class="bg-success text-white p-4 rounded text-center">
+          <h3 class="h4 mb-3">
+            <i class="bi bi-whatsapp me-2"></i>
+            ¿No encontrás lo que buscás?
+          </h3>
+          <p class="mb-3">Tenemos más de 500 productos disponibles. Consultanos por WhatsApp para productos específicos.</p>
+          <a href="contacto.html" class="btn btn-warning btn-lg">
+            <i class="bi bi-telephone me-2"></i>Contactanos
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            Contacto
+          </h3>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt text-success me-2"></i>
+              <strong>Dirección:</strong><br>
+              <span class="ms-4">Calle Sin Gluten 1234, Buenos Aires</span>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone text-success me-2"></i>
+              <strong>Teléfono:</strong><br>
+              <a href="tel:+541112345678" class="text-white ms-4">(011) 1234-5678</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-share-fill me-2"></i>
+            Seguinos
+          </h3>
+          <div class="social-links">
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-12">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            Enlaces
+          </h3>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="index.html" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Inicio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="nosotros.html" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Sobre Nosotros
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="recetas.html" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Recetas
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="my-4 border-secondary">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted">
+            &copy; 2024 Almacén Sin TACC - Todos los derechos reservados
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <small class="text-muted">
+            <i class="bi bi-shield-check text-success me-1"></i>
+            Productos certificados ANMAT
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Filtros de productos -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const productCards = document.querySelectorAll('[data-category]');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('btn-success', 'active'));
+          filterButtons.forEach(btn => btn.classList.add('btn-outline-success'));
+          this.classList.remove('btn-outline-success');
+          this.classList.add('btn-success', 'active');
+          
+          // Filter products
+          productCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

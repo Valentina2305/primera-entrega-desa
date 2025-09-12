@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recetas - Almacén Sin TACC</title>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header con navegación -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="index.html">
+          <i class="bi bi-shop-window me-2"></i>
+          Almacén Sin TACC
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="bi bi-house me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">
+                <i class="bi bi-info-circle me-1"></i>Sobre Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">
+                <i class="bi bi-bag me-1"></i>Productos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="recetas.html">
+                <i class="bi bi-journal-bookmark me-1"></i>Recetas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">
+                <i class="bi bi-telephone me-1"></i>Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section bg-success text-white py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 text-center">
+          <h1 class="display-4 fw-bold mb-3">
+            <i class="bi bi-journal-bookmark-fill me-3"></i>
+            Recetas Sin TACC
+          </h1>
+          <p class="lead">Deliciosas recetas libres de gluten para que disfrutes en casa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-5">
+    <div class="container">
+      
+      <!-- Filtros de recetas -->
+      <section class="mb-5">
+        <div class="row">
+          <div class="col-12">
+            <div class="bg-light p-4 rounded">
+              <h3 class="h5 mb-3 text-success">
+                <i class="bi bi-funnel me-2"></i>
+                Filtrar por tipo
+              </h3>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-success active" data-filter="all">Todas</button>
+                <button class="btn btn-outline-success" data-filter="dulces">Dulces</button>
+                <button class="btn btn-outline-success" data-filter="saladas">Saladas</button>
+                <button class="btn btn-outline-success" data-filter="panes">Panes</button>
+                <button class="btn btn-outline-success" data-filter="postres">Postres</button>
+                <button class="btn btn-outline-success" data-filter="facil">Fáciles</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recetas destacadas -->
+      <section class="mb-5">
+        <h2 class="h3 text-success mb-4">
+          <i class="bi bi-star-fill me-2"></i>
+          Recetas Destacadas
+        </h2>
+        <div class="row g-4">
+          
+          <!-- Pan sin gluten -->
+          <div class="col-lg-6" data-category="panes">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0 d-flex align-items-center">
+                  <i class="bi bi-bread-slice me-2"></i>
+                  Pan Casero Sin TACC
+                  <span class="badge bg-success ms-auto">Fácil</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-3">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>2 horas |
+                    <i class="bi bi-thermometer-half me-1"></i>180°C |
+                    <i class="bi bi-people me-1"></i>8 porciones
+                  </small>
+                </div>
+                <h4 class="h6 text-success mb-2">
+                  <i class="bi bi-basket2 me-1"></i>Ingredientes:
+                </h4>
+                <ul class="list-unstyled mb-3 small">
+                  <li><i class="bi bi-dot"></i>500g de premezcla para pan</li>
+                  <li><i class="bi bi-dot"></i>1 huevo grande</li>
+                  <li><i class="bi bi-dot"></i>300ml de agua tibia</li>
+                  <li><i class="bi bi-dot"></i>25g de levadura fresca</li>
+                  <li><i class="bi bi-dot"></i>2 cdas de aceite de oliva</li>
+                  <li><i class="bi bi-dot"></i>1 cda de azúcar</li>
+                  <li><i class="bi bi-dot"></i>1 cdta de sal</li>
+                </ul>
+                <h4 class="h6 text-success mb-2">
+                  <i class="bi bi-list-ol me-1"></i>Preparación:
+                </h4>
+                <p class="text-muted small">
+                  Disolver la levadura en agua tibia con azúcar. Mezclar todos los ingredientes secos, 
+                  agregar la levadura y el huevo. Amasar 10 minutos, dejar levar 1 hora. 
+                  Formar el pan y hornear 30-35 minutos hasta dorar.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm me-2">
+                  <i class="bi bi-printer me-1"></i>Imprimir
+                </button>
+                <button class="btn btn-success btn-sm">
+                  <i class="bi bi-heart me-1"></i>Guardar
+                </button>
+              </div>
+            </article>
+          </div>
+          
+          <!-- Pizza sin TACC -->
+          <div class="col-lg-6" data-category="saladas">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0 d-flex align-items-center">
+                  <i class="bi bi-pizza me-2"></i>
+                  Pizza Margherita Sin TACC
+                  <span class="badge bg-success ms-auto">Fácil</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-3">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>45 min |
+                    <i class="bi bi-thermometer-half me-1"></i>220°C |
+                    <i class="bi bi-people me-1"></i>4 porciones
+                  </small>
+                </div>
+                <h4 class="h6 text-success mb-2">
+                  <i class="bi bi-basket2 me-1"></i>Ingredientes:
+                </h4>
+                <ul class="list-unstyled mb-3 small">
+                  <li><i class="bi bi-dot"></i>400g de premezcla para pizza</li>
+                  <li><i class="bi bi-dot"></i>1 huevo</li>
+                  <li><i class="bi bi-dot"></i>200ml de agua</li>
+                  <li><i class="bi bi-dot"></i>3 cdas de aceite</li>
+                  <li><i class="bi bi-dot"></i>Salsa de tomate</li>
+                  <li><i class="bi bi-dot"></i>Muzzarella</li>
+                  <li><i class="bi bi-dot"></i>Albahaca fresca</li>
+                </ul>
+                <h4 class="h6 text-success mb-2">
+                  <i class="bi bi-list-ol me-1"></i>Preparación:
+                </h4>
+                <p class="text-muted small">
+                  Mezclar premezcla, huevo, agua y aceite hasta formar masa homogénea. 
+                  Estirar en molde aceitado, cubrir con salsa, queso y hornear 15-20 minutos. 
+                  Agregar albahaca al servir.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm me-2">
+                  <i class="bi bi-printer me-1"></i>Imprimir
+                </button>
+                <button class="btn btn-success btn-sm">
+                  <i class="bi bi-heart me-1"></i>Guardar
+                </button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Más recetas -->
+      <section>
+        <h2 class="h3 text-success mb-4">
+          <i class="bi bi-collection me-2"></i>
+          Todas las Recetas
+        </h2>
+        <div class="row g-4">
+          
+          <!-- Brownies -->
+          <div class="col-lg-4 col-md-6" data-category="dulces postres">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h6 mb-0 d-flex align-items-center">
+                  <i class="bi bi-square-fill me-2"></i>
+                  Brownies Sin TACC
+                  <span class="badge bg-info ms-auto text-white">Medio</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-2">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>1 hora |
+                    <i class="bi bi-people me-1"></i>12 porciones
+                  </small>
+                </div>
+                <p class="text-muted small mb-3">
+                  Brownies húmedos y chocolatosos, perfectos para los amantes del chocolate.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-eye me-1"></i>Ver receta
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Empanadas -->
+          <div class="col-lg-4 col-md-6" data-category="saladas">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h6 mb-0 d-flex align-items-center">
+                  <i class="bi bi-pie-chart me-2"></i>
+                  Empanadas Sin TACC
+                  <span class="badge bg-info ms-auto text-white">Medio</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-2">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>1.5 horas |
+                    <i class="bi bi-people me-1"></i>20 unidades
+                  </small>
+                </div>
+                <p class="text-muted small mb-3">
+                  Masa casera sin TACC para empanadas, perfecta para cualquier relleno.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-eye me-1"></i>Ver receta
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Cookies -->
+          <div class="col-lg-4 col-md-6" data-category="dulces facil">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h6 mb-0 d-flex align-items-center">
+                  <i class="bi bi-cookie me-2"></i>
+                  Cookies de Avena
+                  <span class="badge bg-success ms-auto">Fácil</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-2">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>30 min |
+                    <i class="bi bi-people me-1"></i>24 cookies
+                  </small>
+                </div>
+                <p class="text-muted small mb-3">
+                  Cookies crujientes de avena sin gluten, perfectas para la merienda.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-eye me-1"></i>Ver receta
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Torta de chocolate -->
+          <div class="col-lg-4 col-md-6" data-category="postres dulces">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h6 mb-0 d-flex align-items-center">
+                  <i class="bi bi-cake2 me-2"></i>
+                  Torta de Chocolate
+                  <span class="badge bg-info ms-auto text-white">Medio</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-2">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>1.5 horas |
+                    <i class="bi bi-people me-1"></i>10 porciones
+                  </small>
+                </div>
+                <p class="text-muted small mb-3">
+                  Torta húmeda de chocolate sin TACC, ideal para cumpleaños y celebraciones.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-eye me-1"></i>Ver receta
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Fideos caseros -->
+          <div class="col-lg-4 col-md-6" data-category="saladas">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h6 mb-0 d-flex align-items-center">
+                  <i class="bi bi-egg-fried me-2"></i>
+                  Fideos Caseros
+                  <span class="badge bg-danger ms-auto">Difícil</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-2">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>2 horas |
+                    <i class="bi bi-people me-1"></i>6 porciones
+                  </small>
+                </div>
+                <p class="text-muted small mb-3">
+                  Pasta fresca sin TACC hecha en casa, con la textura perfecta.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-eye me-1"></i>Ver receta
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Muffins -->
+          <div class="col-lg-4 col-md-6" data-category="dulces facil">
+            <article class="recipe-card card h-100 shadow-sm">
+              <div class="card-header bg-warning text-dark">
+                <h3 class="h6 mb-0 d-flex align-items-center">
+                  <i class="bi bi-cup me-2"></i>
+                  Muffins de Arándanos
+                  <span class="badge bg-success ms-auto">Fácil</span>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="recipe-meta mb-2">
+                  <small class="text-muted">
+                    <i class="bi bi-clock me-1"></i>45 min |
+                    <i class="bi bi-people me-1"></i>12 muffins
+                  </small>
+                </div>
+                <p class="text-muted small mb-3">
+                  Muffins esponjosos con arándanos, perfectos para el desayuno.
+                </p>
+              </div>
+              <div class="card-footer bg-light text-center">
+                <button class="btn btn-outline-success btn-sm">
+                  <i class="bi bi-eye me-1"></i>Ver receta
+                </button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section class="mt-5">
+        <div class="bg-success text-white p-4 rounded text-center">
+          <h3 class="h4 mb-3">
+            <i class="bi bi-envelope-heart me-2"></i>
+            ¿Querés más recetas?
+          </h3>
+          <p class="mb-3">Suscribite a nuestro newsletter y recibí nuevas recetas cada semana</p>
+          <div class="row g-2 justify-content-center">
+            <div class="col-md-4">
+              <input type="email" class="form-control" placeholder="Tu email aquí">
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-warning w-100">
+                <i class="bi bi-send me-1"></i>Suscribirme
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tips de cocina -->
+      <section class="mt-5">
+        <h2 class="h3 text-success mb-4">
+          <i class="bi bi-lightbulb me-2"></i>
+          Tips de Cocina Sin TACC
+        </h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="bg-light p-4 rounded">
+              <h4 class="h5 text-success mb-3">
+                <i class="bi bi-shield-check me-2"></i>
+                Evitá la contaminación cruzada
+              </h4>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-check text-success me-2"></i>
+                  Usá utensilios exclusivos para productos sin TACC
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check text-success me-2"></i>
+                  Limpiá bien las superficies antes de cocinar
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check text-success me-2"></i>
+                  Guardá los productos sin TACC por separado
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="bg-light p-4 rounded">
+              <h4 class="h5 text-success mb-3">
+                <i class="bi bi-stars me-2"></i>
+                Consejos para mejores resultados
+              </h4>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-check text-success me-2"></i>
+                  Dejá reposar las masas más tiempo
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check text-success me-2"></i>
+                  Usá huevos a temperatura ambiente
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check text-success me-2"></i>
+                  No abras el horno durante la cocción
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            Contacto
+          </h3>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt text-success me-2"></i>
+              <strong>Dirección:</strong><br>
+              <span class="ms-4">Calle Sin Gluten 1234, Buenos Aires</span>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone text-success me-2"></i>
+              <strong>Teléfono:</strong><br>
+              <a href="tel:+541112345678" class="text-white ms-4">(011) 1234-5678</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-share-fill me-2"></i>
+            Seguinos
+          </h3>
+          <div class="social-links">
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-success btn-lg me-2 mb-2">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-12">
+          <h3 class="h4 mb-4 text-success">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            Enlaces
+          </h3>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="index.html" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Inicio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="nosotros.html" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Sobre Nosotros
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="productos.html" class="text-white">
+                <i class="bi bi-arrow-right text-success me-2"></i>Productos
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="my-4 border-secondary">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted">
+            &copy; 2024 Almacén Sin TACC - Todos los derechos reservados
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <small class="text-muted">
+            <i class="bi bi-shield-check text-success me-1"></i>
+            Productos certificados ANMAT
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Filtros de recetas -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const recipeCards = document.querySelectorAll('[data-category]');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('btn-success', 'active'));
+          filterButtons.forEach(btn => btn.classList.add('btn-outline-success'));
+          this.classList.remove('btn-outline-success');
+          this.classList.add('btn-success', 'active');
+          
+          // Filter recipes
+          recipeCards.forEach(card => {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

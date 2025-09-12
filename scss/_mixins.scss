@@ -1,0 +1,152 @@
+// Mixin para centrar elementos
+@mixin center-flex($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+// Mixin para transiciones suaves
+@mixin smooth-transition($property: all, $duration: $transition-base, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+// Mixin para botones personalizados
+@mixin button-style($bg-color, $text-color, $hover-bg: null, $hover-text: null) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: $spacer-sm $spacer-lg;
+  border-radius: $border-radius-sm;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  @include smooth-transition();
+  
+  &:hover {
+    background-color: if($hover-bg, $hover-bg, darken($bg-color, 10%));
+    color: if($hover-text, $hover-text, $text-color);
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Mixin para cards
+@mixin card-style($padding: $spacer-lg, $bg: $white, $shadow: $shadow-sm) {
+  background-color: $bg;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  @include smooth-transition(box-shadow);
+  
+  &:hover {
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Mixin para texto responsive
+@mixin responsive-font($mobile: 1rem, $tablet: 1.1rem, $desktop: 1.2rem) {
+  font-size: $mobile;
+  
+  @media (min-width: $breakpoint-md) {
+    font-size: $tablet;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    font-size: $desktop;
+  }
+}
+
+// Mixin para contenedores responsive
+@mixin container($max-width: $container-max-width) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacer-lg;
+  
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 $spacer-md;
+  }
+}
+
+// Mixin para animaciones de entrada
+@mixin fade-in($duration: $transition-base) {
+  opacity: 0;
+  animation: fadeIn $duration ease forwards;
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+// Mixin para animaciones de escala
+@mixin scale-on-hover($scale: 1.05) {
+  @include smooth-transition(transform);
+  
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+// Mixin para overlays
+@mixin overlay($color: rgba(0,0,0,0.5)) {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color;
+    z-index: 1;
+  }
+  
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// Mixin para gradientes
+@mixin gradient-background($color1, $color2, $direction: to bottom) {
+  background: linear-gradient($direction, $color1, $color2);
+}
+
+// Mixin para texto truncado
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Mixin para reset de listas
+@mixin list-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Mixin para aspectos responsive de imágenes
+@mixin img-responsive() {
+  max-width: 100%;
+  height: auto;
+}
+
+// Mixin para ocultar elementos visualmente pero mantenerlos accesibles
+@mixin visually-hidden() {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
