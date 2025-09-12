@@ -4,13 +4,16 @@
 // 1. Variables (deben ir primero)
 @import 'variables';
 
-// 2. Mixins (después de variables)
+// 2. Bootstrap completo desde node_modules
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// 3. Mixins (después de Bootstrap y variables)
 @import 'mixins';
 
-// 3. Base (reset y estilos base)
+// 4. Base (reset y estilos base personalizados)
 @import 'base';
 
-// 4. Componentes (elementos reutilizables)
+// 5. Componentes (elementos reutilizables personalizados)
 @import 'components';
 
 // 5. Estilos específicos adicionales
