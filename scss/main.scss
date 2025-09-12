@@ -1,0 +1,288 @@
+// Archivo principal SCSS - Almacén Sin TACC
+// Importa todos los módulos en el orden correcto
+
+// 1. Variables (deben ir primero)
+@import 'variables';
+
+// 2. Mixins (después de variables)
+@import 'mixins';
+
+// 3. Base (reset y estilos base)
+@import 'base';
+
+// 4. Componentes (elementos reutilizables)
+@import 'components';
+
+// 5. Estilos específicos adicionales
+// Responsive Media Queries específicas
+@media (max-width: $breakpoint-md - 1px) {
+  .hero-section {
+    min-height: 60vh;
+    
+    .hero-content {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .lead {
+        font-size: 1rem;
+      }
+    }
+    
+    .hero-buttons {
+      .btn {
+        display: block;
+        width: 100%;
+        margin: $spacer-sm 0;
+      }
+    }
+  }
+  
+  .product-card,
+  .recipe-card,
+  .contact-card {
+    margin-bottom: $spacer-lg;
+  }
+  
+  .navbar-nav {
+    .nav-link {
+      text-align: center;
+      margin: $spacer-xs 0;
+    }
+  }
+  
+  // Stack testimonials on mobile
+  .testimonial-card {
+    .d-flex {
+      flex-direction: column;
+      text-align: center;
+      
+      .testimonial-avatar {
+        margin: 0 auto $spacer-md;
+      }
+    }
+  }
+  
+  // Adjust stats display on mobile
+  .bg-success .row.text-center {
+    .col-md-3 {
+      margin-bottom: $spacer-md;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Tablet styles
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+  .hero-section {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .container {
+    padding: 0 $spacer-xl;
+  }
+}
+
+// Desktop specific enhancements
+@media (min-width: $breakpoint-lg) {
+  // Enhance hover effects on desktop
+  .product-card:hover,
+  .recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  // Better spacing for large screens
+  .hero-section {
+    .container {
+      padding: 0 $spacer-xxl;
+    }
+  }
+  
+  // Enhance navigation on desktop
+  .navbar {
+    .navbar-nav .nav-link {
+      border-radius: $border-radius-lg;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: $accent;
+        @include smooth-transition();
+        transform: translateX(-50%);
+      }
+      
+      &:hover::after,
+      &.active::after {
+        width: 80%;
+      }
+    }
+  }
+}
+
+// Print styles
+@media print {
+  .navbar,
+  .hero-section,
+  footer,
+  .btn,
+  .social-links {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd;
+  }
+}
+
+// Estilos para accesibilidad
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Dark mode support (opcional)
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bs-body-bg: #{$dark};
+    --bs-body-color: #{$white};
+  }
+  
+  .card {
+    background-color: lighten($dark, 10%);
+    color: $white;
+  }
+  
+  .bg-light {
+    background-color: lighten($dark, 5%) !important;
+  }
+}
+
+// Estilos específicos para el logo
+.hero-image img,
+.about-section img {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  @include smooth-transition(filter);
+  
+  &:hover {
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+  }
+}
+
+// Estilos para formularios mejorados
+.form-control {
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+  }
+  
+  &.is-valid {
+    border-color: $success;
+    
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($success, 0.25);
+    }
+  }
+  
+  &.is-invalid {
+    border-color: $danger;
+    
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($danger, 0.25);
+    }
+  }
+}
+
+// Mejoras para la experiencia de usuario
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid $primary;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Estilos para mejorar la legibilidad
+.recipe-card,
+.product-card {
+  .card-text,
+  .list-unstyled {
+    line-height: 1.6;
+  }
+  
+  .small,
+  .badge {
+    font-weight: $font-weight-medium;
+  }
+}
+
+// Utilities adicionales generadas con SASS
+$utilities: (
+  'rounded': (
+    '': $border-radius,
+    'sm': $border-radius-sm,
+    'lg': $border-radius-lg,
+    'xl': $border-radius-xl
+  ),
+  'shadow': (
+    'sm': $shadow-sm,
+    '': $shadow-md,
+    'lg': $shadow-lg,
+    'xl': $shadow-xl
+  )
+);
+
+@each $utility, $values in $utilities {
+  @each $key, $value in $values {
+    $class: if($key == '', '.#{$utility}', '.#{$utility}-#{$key}');
+    
+    @if $utility == 'rounded' {
+      #{$class} {
+        border-radius: $value !important;
+      }
+    } @else if $utility == 'shadow' {
+      #{$class} {
+        box-shadow: $value !important;
+      }
+    }
+  }
+}

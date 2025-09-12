@@ -1,0 +1,165 @@
+// Reset básico y estilos base
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $text;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Estilos base para elementos HTML
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-semibold;
+  line-height: 1.2;
+  margin-bottom: $spacer-md;
+  color: $text;
+}
+
+h1 { @include responsive-font(2rem, 2.5rem, 3rem); }
+h2 { @include responsive-font(1.5rem, 1.75rem, 2rem); }
+h3 { @include responsive-font(1.25rem, 1.4rem, 1.5rem); }
+h4 { @include responsive-font(1.1rem, 1.2rem, 1.25rem); }
+h5 { @include responsive-font(1rem, 1.1rem, 1.1rem); }
+h6 { @include responsive-font(0.9rem, 1rem, 1rem); }
+
+p {
+  margin-bottom: $spacer-md;
+  line-height: 1.7;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  @include smooth-transition(color);
+  
+  &:hover {
+    color: darken($primary, 15%);
+  }
+}
+
+// Estilos para listas
+ul, ol {
+  margin-bottom: $spacer-md;
+  padding-left: $spacer-lg;
+}
+
+// Estilos para imágenes
+img {
+  @include img-responsive();
+  border-radius: $border-radius-sm;
+}
+
+// Estilos para formularios
+input, textarea, select {
+  width: 100%;
+  padding: $spacer-sm $spacer-md;
+  border: 2px solid lighten($text-light, 20%);
+  border-radius: $border-radius-sm;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  @include smooth-transition(border-color);
+  
+  &:focus {
+    outline: none;
+    border-color: $primary;
+    box-shadow: 0 0 0 3px rgba($primary, 0.1);
+  }
+  
+  &::placeholder {
+    color: $text-light;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+// Estilos para botones base
+button {
+  @include button-style($primary, $white);
+  border: none;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// Utilidades de display
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }
+
+// Utilidades de flexbox
+.justify-content-center { justify-content: center !important; }
+.justify-content-between { justify-content: space-between !important; }
+.justify-content-around { justify-content: space-around !important; }
+.align-items-center { align-items: center !important; }
+.align-items-start { align-items: flex-start !important; }
+.align-items-end { align-items: flex-end !important; }
+
+// Utilidades de texto
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-uppercase { text-transform: uppercase !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+// Utilidades de color
+.text-primary { color: $primary !important; }
+.text-secondary { color: $secondary !important; }
+.text-success { color: $success !important; }
+.text-warning { color: $warning !important; }
+.text-danger { color: $danger !important; }
+.text-light { color: $text-light !important; }
+.text-white { color: $white !important; }
+
+// Utilidades de background
+.bg-primary { background-color: $primary !important; }
+.bg-secondary { background-color: $secondary !important; }
+.bg-light { background-color: $light !important; }
+.bg-white { background-color: $white !important; }
+.bg-success { background-color: $success !important; }
+.bg-warning { background-color: $warning !important; }
+
+// Utilidades de margin y padding
+@for $i from 0 through 5 {
+  .m-#{$i} { margin: $i * $spacer-sm !important; }
+  .mt-#{$i} { margin-top: $i * $spacer-sm !important; }
+  .mb-#{$i} { margin-bottom: $i * $spacer-sm !important; }
+  .ml-#{$i} { margin-left: $i * $spacer-sm !important; }
+  .mr-#{$i} { margin-right: $i * $spacer-sm !important; }
+  
+  .p-#{$i} { padding: $i * $spacer-sm !important; }
+  .pt-#{$i} { padding-top: $i * $spacer-sm !important; }
+  .pb-#{$i} { padding-bottom: $i * $spacer-sm !important; }
+  .pl-#{$i} { padding-left: $i * $spacer-sm !important; }
+  .pr-#{$i} { padding-right: $i * $spacer-sm !important; }
+}
+
+// Responsive utilities
+@media (max-width: $breakpoint-md - 1px) {
+  .d-md-none { display: none !important; }
+  .text-md-center { text-align: center !important; }
+}
+
+@media (min-width: $breakpoint-md) {
+  .d-md-block { display: block !important; }
+  .d-md-flex { display: flex !important; }
+}
