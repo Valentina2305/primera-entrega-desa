@@ -277,7 +277,7 @@ $utilities: (
 @each $utility, $values in $utilities {
   @each $key, $value in $values {
     $class: if($key == '', '.#{$utility}', '.#{$utility}-#{$key}');
-    
+
     @if $utility == 'rounded' {
       #{$class} {
         border-radius: $value !important;
@@ -288,4 +288,25 @@ $utilities: (
       }
     }
   }
+}
+
+// Forzar colores de fondo correctos siempre
+.bg-light {
+  background-color: $light !important;
+  color: $text !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+  color: $text !important;
+}
+
+.bg-success {
+  background-color: $success !important;
+  color: $white !important;
+}
+
+.bg-warning {
+  background-color: $warning !important;
+  color: $dark !important;
 }

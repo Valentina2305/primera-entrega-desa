@@ -151,7 +151,8 @@
 // Componente Product Card
 .product-card {
   @include smooth-transition(transform);
-  
+  background-color: $white !important;
+
   &:hover {
     transform: translateY(-5px);
     .card-img-top i {
@@ -159,28 +160,33 @@
       color: $primary;
     }
   }
-  
+
   .card-img-top {
     @include center-flex();
     height: 150px;
-    
+    background-color: $light !important;
+
     i {
       @include smooth-transition();
     }
   }
-  
+
   .card-title {
     color: $primary;
     font-weight: $font-weight-semibold;
   }
-  
+
+  .card-body {
+    background-color: $white !important;
+  }
+
   .badge {
     font-size: 0.75rem;
-    
+
     &.bg-success {
       background-color: $success !important;
     }
-    
+
     &.bg-warning {
       background-color: $warning !important;
       color: $dark !important;
