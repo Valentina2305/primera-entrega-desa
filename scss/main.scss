@@ -166,22 +166,22 @@
   }
 }
 
-// Dark mode support (opcional)
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bs-body-bg: #{$dark};
-    --bs-body-color: #{$white};
-  }
-  
-  .card {
-    background-color: lighten($dark, 10%);
-    color: $white;
-  }
-  
-  .bg-light {
-    background-color: lighten($dark, 5%) !important;
-  }
-}
+// Dark mode desactivado para mantener consistencia visual
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --bs-body-bg: #{$dark};
+//     --bs-body-color: #{$white};
+//   }
+//
+//   .card {
+//     background-color: lighten($dark, 10%);
+//     color: $white;
+//   }
+//
+//   .bg-light {
+//     background-color: lighten($dark, 5%) !important;
+//   }
+// }
 
 // Estilos específicos para el logo
 .hero-image img,
